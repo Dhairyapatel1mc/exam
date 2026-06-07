@@ -115,34 +115,35 @@ Your Name
 
 ---
 
-# 📌 Table of Contents
+<table>
+<tr>
+<td valign="top" width="65%">
 
-- [🎯 Project Overview](#-project-overview)
-- [🎯 Project Objectives](#-project-objectives)
-- [🚀 Features](#-features)
-- [📊 Dataset Attributes](#-dataset-attributes)
-- [📂 Project Structure](#-project-structure)
-- [🧠 Statistical Concepts Used](#-statistical-concepts-used)
-- [🔬 Technologies Used](#-technologies-used)
-- [⚙️ Installation](#️-installation)                                                                  
-- [▶️ How to Run](#️-how-to-run)
-- [📈 Visualizations](#-visualizations)
-- [📋 Sample Results](#-sample-results)
-- [📚 Learning Outcomes](#-learning-outcomes)
-- [💡 Future Improvements](#-future-improvements)
-- [👨‍💻 Author](#-author)
-- [⭐ Support](#-support)
-- [🏆 Final Conclusion](#-final-conclusion)
+- 🎯 [Project Objectives](#project-objectives)
+- 🚀 [Features](#features)
+- 📊 [Dataset Attributes](#dataset-attributes)
+- 📂 [Project Structure](#project-structure)
+- 🧠 [Statistical Concepts Used](#statistical-concepts-used)
+- 🔬 [Technologies Used](#technologies-used)
+- ⚙️ [Installation](#installation)
+- ▶️ [How to Run](#how-to-run)
+- 📈 [Visualizations](#visualizations)
+- 📋 [Sample Results](#sample-results)
+- 📚 [Learning Outcomes](#learning-outcomes)
+- 💡 [Future Improvements](#future-improvements)
+- 👨‍💻 [Author](#author)
+- ⭐ [Support](#support)
+- 🏆 [Final Conclusion](#final-conclusion)
+
 </td>
 
-<td width="40%" align="center">
+<td valign="top" align="right">
 
-<img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="300">
+<img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="300"/>
 
 </td>
 </tr>
 </table>
----
 
 # 🎯 Project Overview
 
