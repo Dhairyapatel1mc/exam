@@ -1136,3 +1136,554 @@ Meaning:
 Approximately **60% of students passed the exam**.
 
 ---
+## 2️⃣ Empirical Probability
+
+Empirical probability is calculated using observed data.
+
+### Formula
+
+```math
+P(E)=\frac{Number\ of\ Times\ Event\ Occurred}{Total\ Observations}
+```
+
+### Example
+
+Suppose:
+
+- 120 students pass
+- Total students = 200
+
+```math
+P(Pass)=\frac{120}{200}
+```
+
+```math
+P(Pass)=0.60
+```
+
+Meaning:
+
+The observed probability of passing is **60%**.
+
+### Example from Project
+
+Calculate pass probability using generated student data.
+
+### Python Code
+
+```python
+empirical_probability = P_pass
+
+print(empirical_probability)
+```
+
+### How the Code Works
+
+`P_pass` already contains the proportion of students who passed.
+
+### Sample Output
+
+```text
+0.60
+```
+
+---
+
+## 3️⃣ Theoretical Probability
+
+Theoretical probability is calculated mathematically before observing data.
+
+### Formula
+
+```math
+P(E)=\frac{Favorable\ Outcomes}{Total\ Possible\ Outcomes}
+```
+
+### Example
+
+Weekend days:
+
+- Saturday
+- Sunday
+
+Total days:
+
+- 7
+
+```math
+P(Weekend)=\frac{2}{7}
+```
+
+```math
+P(Weekend)=0.2857
+```
+
+Meaning:
+
+There is a **28.57% chance** of selecting a weekend day.
+
+### Example from Project
+
+Theoretical probability example.
+
+### Python Code
+
+```python
+theoretical_probability = 2 / 7
+
+print(theoretical_probability)
+```
+
+### How the Code Works
+
+Python divides 2 by 7.
+
+### Sample Output
+
+```text
+0.2857
+```
+
+---
+
+## 4️⃣ Random Variable
+
+A random variable assigns numerical values to outcomes.
+
+### Formula
+
+```math
+X = Number\ of\ students\ passing\ among\ 3\ selected\ students
+```
+
+### Example
+
+Possible values:
+
+```text
+0,1,2,3
+```
+
+### Example from Project
+
+Students passing among 3 selected students.
+
+### Python Code
+
+```python
+p = P_pass
+n_students = 3
+
+distribution = pd.DataFrame({
+    "X": range(4),
+    "P(X=x)": [
+        binom.pmf(x, n_students, p)
+        for x in range(4)
+    ]
+})
+
+print(distribution)
+```
+
+### How the Code Works
+
+Calculates probabilities for:
+
+```text
+P(X=0)
+P(X=1)
+P(X=2)
+P(X=3)
+```
+
+### Sample Output
+
+```text
+X   P(X=x)
+0   0.064
+1   0.288
+2   0.432
+3   0.216
+```
+
+---
+
+## 5️⃣ Probability Distribution
+
+Shows all possible values of a random variable and their probabilities.
+
+### Formula
+
+```math
+P(X=x)=\binom{n}{x}p^x(1-p)^{n-x}
+```
+
+### Example
+
+Find probability that exactly 2 out of 3 students pass.
+
+### Python Code
+
+```python
+binom.pmf(2, 3, 0.60)
+```
+
+### How the Code Works
+
+Calculates:
+
+```math
+P(X=2)
+```
+
+using Binomial Distribution.
+
+### Sample Output
+
+```text
+0.432
+```
+
+---
+
+## 6️⃣ Mean of Random Variable
+
+Average expected outcome.
+
+### Formula
+
+```math
+\mu=np
+```
+
+### Example
+
+```math
+(3)(0.60)=1.8
+```
+
+### Python Code
+
+```python
+mean_x = n_students * p
+
+print(mean_x)
+```
+
+### How the Code Works
+
+Multiplies trials by success probability.
+
+### Sample Output
+
+```text
+1.8
+```
+
+---
+
+## 7️⃣ Variance of Random Variable
+
+Measures spread of outcomes.
+
+### Formula
+
+```math
+\sigma^2=np(1-p)
+```
+
+### Example
+
+```math
+(3)(0.60)(0.40)
+```
+
+```math
+0.72
+```
+
+### Python Code
+
+```python
+variance_x = n_students * p * (1 - p)
+
+print(variance_x)
+```
+
+### Sample Output
+
+```text
+0.72
+```
+
+---
+
+## 8️⃣ Venn Diagram Analysis
+
+Used to analyze overlapping groups.
+
+### Example
+
+Set A:
+
+```text
+Study Hours > 10
+```
+
+Set B:
+
+```text
+Attendance > 80%
+```
+
+### Python Code
+
+```python
+A = df["study_hours"] > 10
+B = df["attendance"] > 80
+
+only_A = np.sum(A & ~B)
+only_B = np.sum(~A & B)
+both = np.sum(A & B)
+neither = np.sum(~A & ~B)
+```
+
+### How the Code Works
+
+Calculates overlap between study habits and attendance.
+
+---
+
+## 9️⃣ Contingency Table
+
+Compares two categorical variables.
+
+### Example from Project
+
+Group Discussion vs Final Result.
+
+### Python Code
+
+```python
+contingency_table = pd.crosstab(
+    df["group_discussion"],
+    df["final_exam_pass"]
+)
+
+print(contingency_table)
+```
+
+### How the Code Works
+
+Counts students in each category combination.
+
+---
+
+## 🔟 Joint Probability
+
+Probability of two events occurring together.
+
+### Formula
+
+```math
+P(A \cap B)
+```
+
+### Example
+
+Student participates in group discussion and passes.
+
+### Python Code
+
+```python
+joint_probability = len(
+    df[
+        (df["group_discussion"] == "Yes")
+        &
+        (df["final_exam_pass"] == "Pass")
+    ]
+) / len(df)
+```
+
+### Sample Output
+
+```text
+0.45
+```
+
+---
+
+## 1️⃣1️⃣ Marginal Probability
+
+Probability of a single event.
+
+### Formula
+
+```math
+P(A)
+```
+
+### Example
+
+Probability of passing.
+
+### Python Code
+
+```python
+marginal_probability = len(
+    df[df["final_exam_pass"] == "Pass"]
+) / len(df)
+```
+
+### Sample Output
+
+```text
+0.60
+```
+
+---
+
+## 1️⃣2️⃣ Conditional Probability
+
+Probability of an event given another event.
+
+### Formula
+
+```math
+P(A|B)=\frac{P(A\cap B)}{P(B)}
+```
+
+### Example
+
+Probability of passing given group discussion participation.
+
+### Python Code
+
+```python
+conditional_probability = (
+    len(
+        df[
+            (df["group_discussion"] == "Yes")
+            &
+            (df["final_exam_pass"] == "Pass")
+        ]
+    )
+    /
+    len(df[df["group_discussion"] == "Yes"])
+)
+```
+
+### Sample Output
+
+```text
+0.75
+```
+
+---
+
+## 1️⃣3️⃣ Independent vs Dependent Events
+
+### Formula
+
+```math
+P(A\cap B)=P(A)P(B)
+```
+
+### Example
+
+Check whether group discussion affects passing.
+
+### Python Code
+
+```python
+left_side = joint_probability
+
+right_side = (
+    (df["group_discussion"] == "Yes").mean()
+    *
+    (df["final_exam_pass"] == "Pass").mean()
+)
+```
+
+### How the Code Works
+
+Compares actual joint probability against expected probability.
+
+---
+
+## 1️⃣4️⃣ Bayes Theorem
+
+Used for prediction.
+
+### Formula
+
+
+::contentReference[oaicite:0]{index=0}
+
+
+### Example
+
+Predict probability of passing with high attendance.
+
+### Python Code
+
+```python
+P_H_given_Pass = 0.70
+P_H_given_Fail = 0.40
+P_H = 0.60
+
+P_Pass_given_H = (
+    P_H_given_Pass * P_Pass
+) / P_H
+```
+
+### Sample Output
+
+```text
+0.7778
+```
+
+Meaning:
+
+Students with high attendance have approximately **77.78% probability of passing**.
+
+---
+
+## 1️⃣5️⃣ Data Visualization
+
+Visual representations help identify trends and relationships.
+
+### Bar Chart
+
+```python
+df["final_exam_pass"].value_counts().plot(
+    kind="bar"
+)
+plt.show()
+```
+
+### Histogram
+
+```python
+plt.hist(
+    df["attendance"],
+    bins=10
+)
+plt.show()
+```
+
+### Scatter Plot
+
+```python
+plt.scatter(
+    df["study_hours"],
+    df["previous_test_score"]
+)
+plt.show()
+```
+
+### How the Code Works
+
+- Bar Chart → Pass vs Fail comparison
+- Histogram → Attendance distribution
+- Scatter Plot → Relationship between study hours and scores
