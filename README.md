@@ -114,7 +114,7 @@ Your Name
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-yellow?style=for-the-badge)
 
 ---
-
+# 📌 Table of Contents
 <table>
 <tr>
 <td valign="top" width="65%">
