@@ -116,17 +116,19 @@ Your Name
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-yellow?style=for-the-badge)
 
 
-<h3 align="center">🤝 Connect With Me</h3>
+<div align="center">
 
-<p align="center">
-  <a href="https://instagram.com/YOUR_USERNAME">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
-  </a>
-  
-  <a href="https://linkedin.com/in/YOUR_USERNAME">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-</p>
+## 🌐 Connect With Me
+
+<a href="https://instagram.com/YOUR_USERNAME">
+  <img src="https://skillicons.dev/icons?i=instagram" height="60" />
+</a>
+
+<a href="https://linkedin.com/in/YOUR_USERNAME">
+  <img src="https://skillicons.dev/icons?i=linkedin" height="60" />
+</a>
+
+</div>
 ---
 # 📌 Table of Contents
 <table>
