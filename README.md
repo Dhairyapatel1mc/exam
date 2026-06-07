@@ -124,7 +124,13 @@ Your Name
 - [📂 Project Structure](#-project-structure)
 - [🧠 Statistical Concepts Used](#-statistical-concepts-used)
 - [🔬 Technologies Used](#-technologies-used)
-- [⚙️ Installation](#️-installation)
+- [⚙️ Installation](#️-installation)                                                      p align="center">
+  <img src="https://capsule-render.vercel.app/api?text=Student+Management+System&animation=fadeIn&type=waving&color=gradient&height=100"/>
+</p>
+
+<p align="center">
+  <img width="300" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif">
+</p>
 - [▶️ How to Run](#️-how-to-run)
 - [📈 Visualizations](#-visualizations)
 - [📋 Sample Results](#-sample-results)
