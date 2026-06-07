@@ -124,7 +124,7 @@ Your Name
 - [📂 Project Structure](#-project-structure)
 - [🧠 Statistical Concepts Used](#-statistical-concepts-used)
 - [🔬 Technologies Used](#-technologies-used)
-- [⚙️ Installation](#️-installation)                              <p align="center"><img width="300" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif"></p>                                          
+- [⚙️ Installation](#️-installation)                                                                  
 - [▶️ How to Run](#️-how-to-run)
 - [📈 Visualizations](#-visualizations)
 - [📋 Sample Results](#-sample-results)
@@ -133,7 +133,15 @@ Your Name
 - [👨‍💻 Author](#-author)
 - [⭐ Support](#-support)
 - [🏆 Final Conclusion](#-final-conclusion)
+</td>
 
+<td width="40%" align="center">
+
+<img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="300">
+
+</td>
+</tr>
+</table>
 ---
 
 # 🎯 Project Overview
