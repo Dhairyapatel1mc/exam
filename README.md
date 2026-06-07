@@ -714,4 +714,338 @@ Through the use of Probability Theory, Binomial Distribution, Conditional Probab
 The **Expectation Decider** project demonstrates how Probability and Statistics can be used to make data-driven academic predictions. By combining probability theory, conditional probability, contingency tables, and Bayes theorem, the model provides meaningful insights into student success factors and supports intelligent decision-making.
 
 
+# 🧠 Statistical Concepts Used
+
+---
+
+## 1️⃣ Probability
+
+Probability measures how likely an event is to occur.
+
+### Formula
+
+```math
+P(E)=\frac{Favorable\ Outcomes}{Total\ Outcomes}
+```
+
+### Example
+
+120 students passed out of 200 students.
+
+```math
+P(Pass)=\frac{120}{200}=0.60
+```
+
+### Python Code
+
+```python
+total_students = 200
+passed_students = 120
+
+probability_pass = passed_students / total_students
+
+print(probability_pass)
+```
+
+**Output**
+
+```text
+0.60
+```
+
+---
+
+## 2️⃣ Empirical Probability
+
+Empirical probability uses observed data.
+
+### Formula
+
+```math
+P(E)=\frac{Observed\ Successes}{Total\ Observations}
+```
+
+### Python Code
+
+```python
+empirical_probability = len(
+    df[df["final_exam_pass"] == "Pass"]
+) / len(df)
+
+print(empirical_probability)
+```
+
+---
+
+## 3️⃣ Theoretical Probability
+
+Probability calculated mathematically.
+
+### Example
+
+Selecting a weekend day from a week.
+
+```math
+P(Weekend)=\frac{2}{7}
+```
+
+### Python Code
+
+```python
+theoretical_probability = 2 / 7
+
+print(theoretical_probability)
+```
+
+---
+
+## 4️⃣ Random Variable
+
+Let:
+
+```math
+X = Number\ of\ students\ passing\ among\ 3\ students
+```
+
+### Python Code
+
+```python
+from scipy.stats import binom
+
+p = 0.60
+n = 3
+
+for x in range(4):
+    print(
+        f"P(X={x}) =",
+        round(binom.pmf(x, n, p), 4)
+    )
+```
+
+---
+
+## 5️⃣ Binomial Distribution
+
+### Formula
+
+```math
+P(X=x)=\binom{n}{x}p^x(1-p)^{n-x}
+```
+
+### Python Code
+
+```python
+from scipy.stats import binom
+
+probability = binom.pmf(
+    k=2,
+    n=3,
+    p=0.60
+)
+
+print(probability)
+```
+
+**Output**
+
+```text
+0.432
+```
+
+---
+
+## 6️⃣ Mean of Binomial Distribution
+
+### Formula
+
+```math
+\mu=np
+```
+
+### Python Code
+
+```python
+n = 3
+p = 0.60
+
+mean = n * p
+
+print(mean)
+```
+
+**Output**
+
+```text
+1.8
+```
+
+---
+
+## 7️⃣ Variance of Binomial Distribution
+
+### Formula
+
+```math
+\sigma^2=np(1-p)
+```
+
+### Python Code
+
+```python
+n = 3
+p = 0.60
+
+variance = n * p * (1 - p)
+
+print(variance)
+```
+
+**Output**
+
+```text
+0.72
+```
+
+---
+
+## 8️⃣ Joint Probability
+
+### Formula
+
+```math
+P(A \cap B)
+```
+
+### Python Code
+
+```python
+joint_probability = len(
+    df[
+        (df["group_discussion"] == "Yes")
+        &
+        (df["final_exam_pass"] == "Pass")
+    ]
+) / len(df)
+
+print(joint_probability)
+```
+
+---
+
+## 9️⃣ Marginal Probability
+
+### Formula
+
+```math
+P(A)
+```
+
+### Python Code
+
+```python
+marginal_probability = len(
+    df[df["final_exam_pass"] == "Pass"]
+) / len(df)
+
+print(marginal_probability)
+```
+
+---
+
+## 🔟 Conditional Probability
+
+### Formula
+
+```math
+P(A|B)=\frac{P(A\cap B)}{P(B)}
+```
+
+### Python Code
+
+```python
+conditional_probability = (
+    len(
+        df[
+            (df["group_discussion"] == "Yes")
+            &
+            (df["final_exam_pass"] == "Pass")
+        ]
+    )
+    /
+    len(
+        df[
+            df["group_discussion"] == "Yes"
+        ]
+    )
+)
+
+print(conditional_probability)
+```
+
+---
+
+## 1️⃣1️⃣ Independent vs Dependent Events
+
+### Python Code
+
+```python
+joint = len(
+    df[
+        (df["group_discussion"] == "Yes")
+        &
+        (df["final_exam_pass"] == "Pass")
+    ]
+) / len(df)
+
+product = (
+    (df["group_discussion"] == "Yes").mean()
+    *
+    (df["final_exam_pass"] == "Pass").mean()
+)
+
+print("P(A∩B) =", joint)
+print("P(A)P(B) =", product)
+
+if abs(joint - product) < 0.02:
+    print("Independent")
+else:
+    print("Dependent")
+```
+
+---
+
+## 1️⃣2️⃣ Bayes Theorem
+
+### Formula
+
+```math
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+```
+
+### Python Code
+
+```python
+P_H_given_Pass = 0.70
+P_H_given_Fail = 0.40
+P_H = 0.60
+
+P_Pass = (
+    (P_H - P_H_given_Fail)
+    /
+    (P_H_given_Pass - P_H_given_Fail)
+)
+
+P_Pass_given_H = (
+    P_H_given_Pass * P_Pass
+) / P_H
+
+print(P_Pass_given_H)
+```
+
+**Output**
+
+```text
+0.7778
+```
+
 
