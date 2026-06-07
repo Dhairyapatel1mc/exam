@@ -139,7 +139,7 @@ Your Name
 
 <td valign="top" align="right">
 
-<img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="300"/>
+<img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="400"/>
 
 </td>
 </tr>
