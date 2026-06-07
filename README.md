@@ -103,7 +103,9 @@ Your Name
 
 
 
-# 🎯 Expectation Decider
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&text=Expectation%20Decider&fontAlign=50&fontAlignY=40&color=gradient" />
+</p>
 ### Probability & Statistics Based Student Performance Prediction Model
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
