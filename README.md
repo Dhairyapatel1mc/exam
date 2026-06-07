@@ -63,11 +63,11 @@ This project is open-source and available under the MIT License.
 
 For any queries or feedback, feel free to reach out.
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?text=Student+Management+System&animation=fadeIn&type=waving&color=gradient&height=120"/>
+  <img src="https://capsule-render.vercel.app/api?text=Student+Management+System&animation=fadeIn&type=waving&color=gradient&height=100"/>
 </p>
 
 <p align="center">
-  <img width="500" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif">
+  <img width="300" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif">
 </p>
 
 # Student Management System
