@@ -1044,4 +1044,95 @@ print(P_Pass_given_H)
 
 **Output**
 
+## 1️⃣ Probability
 
+Probability measures the likelihood that an event will occur.
+
+### Formula
+
+```math
+P(E)=\frac{Favorable\ Outcomes}{Total\ Outcomes}
+```
+
+### Example
+
+Suppose:
+
+- 120 students pass
+- Total students = 200
+
+```math
+P(Pass)=\frac{120}{200}
+```
+
+```math
+P(Pass)=0.60
+```
+
+Meaning:
+
+There is a **60% chance** that a randomly selected student passes.
+
+### Example from Project
+
+Probability that a student passes the final exam.
+
+### Python Code
+
+```python
+P_pass = (
+    df["final_exam_pass"] == "Pass"
+).mean()
+
+print(P_pass)
+```
+
+### How the Code Works
+
+```python
+df["final_exam_pass"] == "Pass"
+```
+
+Creates a Boolean series:
+
+```text
+True
+False
+True
+True
+...
+```
+
+Internally Python treats:
+
+```text
+True = 1
+False = 0
+```
+
+Therefore:
+
+```python
+.mean()
+```
+
+Calculates:
+
+```math
+\frac{Number\ of\ Passes}
+{Total\ Students}
+```
+
+which gives the probability of passing.
+
+### Sample Output
+
+```text
+0.60
+```
+
+Meaning:
+
+Approximately **60% of students passed the exam**.
+
+---
