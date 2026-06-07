@@ -120,12 +120,14 @@ Your Name
 
 ## 🌐 Connect With Me
 
-<a href="https://instagram.com/YOUR_USERNAME">
-  <img src="https://skillicons.dev/icons?i=instagram" height="60" />
+<a href="https://www.instagram.com/ghost_6927/?hl=en" target="_blank">
+  <img src="https://skillicons.dev/icons?i=instagram" height="60" alt="Instagram" />
 </a>
 
-<a href="https://linkedin.com/in/YOUR_USERNAME">
-  <img src="https://skillicons.dev/icons?i=linkedin" height="60" />
+&nbsp;&nbsp;&nbsp;
+
+<a href="https://www.linkedin.com/in/ghost-patel-0267663b7/" target="_blank">
+  <img src="https://skillicons.dev/icons?i=linkedin" height="60" alt="LinkedIn" />
 </a>
 
 </div>
