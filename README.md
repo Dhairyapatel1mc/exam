@@ -116,21 +116,17 @@ Your Name
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-yellow?style=for-the-badge)
 
 
-<div align="center">
+<h2 align="center">🌐 Connect With Me</h2>
 
-## 🌐 Connect With Me
-
-<a href="https://www.instagram.com/ghost_6927/?hl=en" target="_blank">
-  <img src="https://skillicons.dev/icons?i=instagram" height="60" alt="Instagram" />
-</a>
-
-&nbsp;&nbsp;&nbsp;
-
-<a href="https://www.linkedin.com/in/ghost-patel-0267663b7/" target="_blank">
-  <img src="https://skillicons.dev/icons?i=linkedin" height="60" alt="LinkedIn" />
-</a>
-
-</div>
+<p align="center">
+  <a href="https://www.instagram.com/ghost_6927/?hl=en" target="_blank">
+    <img src="https://skillicons.dev/icons?i=instagram" height="60" alt="Instagram"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/ghost-patel-0267663b7/" target="_blank">
+    <img src="https://skillicons.dev/icons?i=linkedin" height="60" alt="LinkedIn"/>
+  </a>
+</p>
 ---
 # 📌 Table of Contents
 <table>
